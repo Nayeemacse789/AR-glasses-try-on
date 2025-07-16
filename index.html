@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Try-On Glasses in AR</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h1>👓 Virtual Glasses Try-On</h1>
+    <p>Try different glasses in AR</p>
+  </header>
+
+  <section id="gallery">
+    <h2>Select Glasses</h2>
+    <div class="model-list">
+      <button onclick="loadModel('assets/models/glasses1.glb')">Glasses 1</button>
+      <button onclick="loadModel('assets/models/glasses2.glb')">Glasses 2</button>
+    </div>
+  </section>
+
+  <section id="viewer">
+    <model-viewer
+      id="model-viewer"
+      src="assets/models/glasses1.glb"
+      ar
+      ar-modes="scene-viewer webxr quick-look"
+      camera-controls
+      auto-rotate
+      shadow-intensity="1"
+      style="width: 100%; height: 500px;"
+    ></model-viewer>
+  </section>
+
+  <footer>
+    <p>© 2025 AR Glasses Try-On</p>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</body>
+</html>
